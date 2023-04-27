@@ -196,6 +196,10 @@ class AnimalControllerWithRepos extends Controller
             ]
         );
     }
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> c48af0118a68d27d7c04ae60895dbbb29f18426b

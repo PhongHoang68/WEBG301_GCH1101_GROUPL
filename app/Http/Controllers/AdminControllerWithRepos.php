@@ -140,7 +140,11 @@ class AdminControllerWithRepos extends Controller
                 'a_username.min' => 'Username must be great than 2 character',
                 'a_username.max' => 'Username must be small than 255 character',
                 'a_password_hash.required' => 'Please input password of Admin',
+<<<<<<< HEAD
                 'a_password_hash.regex' => 'Password should not have special character',
+=======
+//                'a_password_hash.regex' => 'Password should not have special character',
+>>>>>>> c48af0118a68d27d7c04ae60895dbbb29f18426b
                 'a_fullname.required' => 'Please input fullname of Admin',
                 'a_fullname.min' => 'Your fullname must be greate than 5 character',
                 'a_phone.required' => 'Please input phone number of Admin',

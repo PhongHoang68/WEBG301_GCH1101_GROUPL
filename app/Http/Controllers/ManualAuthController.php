@@ -21,12 +21,17 @@ class ManualAuthController extends Controller
         $a_password_hash = $request->input('a_password_hash');
         $index = 0;
         foreach($adminInformations as $adminInformation){
+<<<<<<< HEAD
             print($adminInformation->a_username);
             print($a_username);
             print($adminInformation->a_password_hash);
             print($a_password_hash);
             if(($adminInformation->a_username) == $a_username && ($adminInformation->a_password_hash) == $a_password_hash) {
                 $index = 0;
+=======
+            if(($adminInformation->a_username) == $a_username && ($adminInformation->a_password_hash) == sha1($a_password_hash)) {
+//                $index = 0;
+>>>>>>> c48af0118a68d27d7c04ae60895dbbb29f18426b
                 Session::put('a_username', $request->input('a_username'));
                 return redirect()->route('admin.index');
 
@@ -44,8 +49,13 @@ class ManualAuthController extends Controller
                 ->with('msg', 'Wrong username or password!, Please Re-Sign In!');
         }
 
+<<<<<<< HEAD
           Session::put('a_username', $request->input('a_username'));
         return redirect()->route('admin.index');
+=======
+//        Session::put('a_username', $request->input('a_username'));
+//        return redirect()->route('admin.index');
+>>>>>>> c48af0118a68d27d7c04ae60895dbbb29f18426b
     }
 
     public function signout(){
@@ -72,4 +82,7 @@ class ManualAuthController extends Controller
         );
     }
 }
+<<<<<<< HEAD
    
+=======
+>>>>>>> c48af0118a68d27d7c04ae60895dbbb29f18426b
